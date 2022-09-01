@@ -10,8 +10,8 @@ rst:0x10 (RTCWDT_RTC_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT) flash read err, 1000
 ```
 
  когда подключаю сперва USB2SERIAL флешку, а потом кабель прошивки. Это связано с тем, что Gpio12 — это контакт начальной загрузки, он может установить (неправильное) напряжение флэш-памяти и включить внутренний ldo. На форуме много тем по этому поводу [тыц](https://www.esp32.com/viewtopic.php?t=9941) ;
-- USART через MAX3485CSA отрабатывает исправно (правый терминал на [рис.1](.\img\photo_2022-09-01_02-06-19.jpg) );
-- RS-485 отрабатывает корректно через 485ю флешку[рис.2](img\photo_2022-09-01_02-06-38.jpg), осциллограмма корректная [рис.3](img\photo_2022-09-01_01-55-49.jpg); 
+- USART через MAX3485CSA отрабатывает исправно (правый терминал на [рис.1](https://github.com/Googloplex/esp32_remap_uart/blob/master/img/photo_2022-09-01_02-06-19.jpg) );
+- RS-485 отрабатывает корректно через 485ю флешку [рис.2](https://github.com/Googloplex/esp32_remap_uart/blob/master/img/photo_2022-09-01_01-55-49.jpg), осциллограмма корректная [рис.3](https://github.com/Googloplex/esp32_remap_uart/blob/master/img/photo_2022-09-01_02-06-38.jpg); 
 
 
 В итоге, я внес фикс в ветку `modbus_test`, но еще не тестил его - [линк](https://github.com/PetrZapletal/ESP-EVSE3upgrade/commit/aaa94becef42dfe79100171848496d0885c0e41d).
@@ -29,7 +29,7 @@ rst:0x10 (RTCWDT_RTC_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT) flash read err, 1000
 ```
 
 Материалы: 
-- [Линк](https://micro-pi.ru/terminal-1-9b-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-com-%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%BC/) на терминал как у меня, настройки на [скрине](img\photo_2022-09-01_02-06-19.jpg);
+- [Линк](https://micro-pi.ru/terminal-1-9b-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-com-%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%BC/) на терминал как у меня, настройки на [скрине](https://github.com/Googloplex/esp32_remap_uart/blob/master/img/photo_2022-09-01_02-06-19.jpg);
 - [Доки](https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf) референс мануала по которому работал (Глава 4, IO_MUX and GPIO Matrix (GPIO, IO_MUX), если что);
 - Ниже, родной ридми примера репла...
 
